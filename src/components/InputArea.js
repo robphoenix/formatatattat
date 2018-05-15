@@ -4,7 +4,15 @@ export default class InputArea extends Component {
   render() {
     return (
       <div className="input-area">
-        <textarea name="inputArea">Paste your JSON here.</textarea>
+        <form>
+          <label>
+            JSON:
+            <textarea
+              value={this.props.value}
+              onChange={this.props.handleChange}
+            />
+          </label>
+        </form>
       </div>
     )
   }
