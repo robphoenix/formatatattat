@@ -1,18 +1,18 @@
-import React, { Component } from "react"
+import React from 'react';
 
-export default class OutputArea extends Component {
-  render() {
-    if (this.props.hasError) {
-      return (
-        <div className="output-area">
-          <p>Error: {this.props.error.toString()}</p>
-        </div>
-      )
-    }
+const OutputArea = ({ hasError, value, error }) => {
+  if (hasError) {
     return (
       <div className="output-area">
-        <pre>{this.props.value}</pre>
+        <p>Error: {error.toString()}</p>
       </div>
-    )
+    );
   }
-}
+  return (
+    <div className="output-area">
+      <pre>{value}</pre>
+    </div>
+  );
+};
+
+export default OutputArea;

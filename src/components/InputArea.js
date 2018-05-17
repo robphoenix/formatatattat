@@ -1,19 +1,14 @@
-import React, { Component } from "react"
+import React from 'react';
 
-export default class InputArea extends Component {
-  render() {
-    return (
-      <div className="input-area">
-        <form>
-          <label>
-            JSON:
-            <textarea
-              value={this.props.value}
-              onChange={this.props.handleChange}
-            />
-          </label>
-        </form>
-      </div>
-    )
-  }
-}
+const InputArea = ({ value, handleChange }) => (
+  <div>
+    <form>
+      <label htmlFor="inputArea">
+        JSON:
+        <textarea value={value} onChange={handleChange} />
+      </label>
+    </form>
+  </div>
+);
+
+export default InputArea;
