@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      inputValue: 'Paste your JSON here.',
+      inputValue: '',
       outputValue: '',
       hasError: false,
       errorValue: '',
@@ -38,9 +38,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Formattertattat</h1>
+      <div className="">
+        <header className="tc">
+          <h1 className="f1 fw4 avenir pb4">
+            Formatter<span className="mid-gray">tat</span>
+            <span className="gray">tat</span>
+          </h1>
         </header>
         <InputArea
           value={this.state.inputValue}

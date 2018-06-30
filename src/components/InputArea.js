@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
 const InputArea = ({ value, handleChange }) => (
-  <div>
+  <div className="fl w-50">
     <form>
       <label htmlFor="inputArea">
-        JSON:
+        Paste your JSON here
         <textarea value={value} onChange={handleChange} />
       </label>
     </form>
   </div>
-);
+)
 
-export default InputArea;
+export default InputArea
